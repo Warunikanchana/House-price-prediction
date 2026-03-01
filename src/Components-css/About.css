@@ -1,0 +1,78 @@
+.about-section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 90px 60px;
+  background-color: #dce4ec;
+}
+
+.about-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  
+}
+  
+
+.about-header {
+  text-align: center;
+  margin-bottom: 70px;
+  padding: 20px;
+  
+}
+.about-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #141614;
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+}
+
+.about-subtitle {
+  font-size: 1.1rem;
+  color: #2c333b;
+  line-height: 1.7;
+}
+.threeBlock-container {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  width: 100%;
+}
+/* 3 cards in one line */
+
+
+/* each card uses equal width */
+.threeBlock-card {
+  flex: 1;
+  background: #92cdf5;
+  border-radius: 18px;
+  padding: 28px 22px;
+  text-align: center;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
+}
+.threeBlock-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 18px;
+}
+
+.threeBlock-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #0f172a;
+  align-items: center;
+}
+
+.threeBlock-desc {
+  font-size: 1rem;
+  color: #2c333b;
+  line-height: 1.6;
+  align-items: center;
+}
+
+/* responsive: stack on small screens */
+@media (max-width: 900px) {
+  .threeBlock-container {
+    flex-direction: column;
+  }
+}
