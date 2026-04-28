@@ -1,0 +1,92 @@
+.seller-page {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: calc(100vh - 88px);
+  margin-top: 88px;
+  background: #bfd0ea;
+}
+
+.seller-sidebar {
+  padding: 30px 18px;
+  background: #ffffff;
+  border-right: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.seller-brand {
+  margin-bottom: 26px;
+}
+
+.seller-brand h2 {
+  margin: 0 0 6px;
+  color: #0f766e;
+  font-size: 1.8rem;
+}
+
+.seller-brand p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.seller-nav {
+  display: grid;
+  gap: 10px;
+}
+
+.seller-nav-item {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: transparent;
+  color: #475569;
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+}
+
+.seller-nav-item.active {
+  background: rgba(15, 118, 110, 0.12);
+  color: #0f766e;
+}
+
+.seller-main {
+  padding: 34px 34px 46px;
+}
+
+.seller-panel {
+  max-width: 1180px;
+}
+
+.seller-panel .predict-section {
+  padding: 8px 0;
+}
+
+.seller-panel .predict-wrapper {
+  max-width: none;
+}
+
+.seller-panel .predict-header {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.seller-panel .predict-subtitle {
+  margin: 0;
+  max-width: 760px;
+}
+
+@media (max-width: 1000px) {
+  .seller-page {
+    grid-template-columns: 1fr;
+  }
+
+  .seller-sidebar {
+    border-right: none;
+    border-bottom: 1px solid rgba(71, 114, 175, 0.16);
+    background-color: #ffffff;
+  }
+
+  .seller-main {
+    padding: 24px;
+  }
+}

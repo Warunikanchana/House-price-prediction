@@ -1,78 +1,73 @@
+
 .about-section {
-  width: 100%;
-  min-height: 100vh;
-  padding: 90px 60px;
-  background-color: #dce4ec;
+  padding: 80px 60px;
 }
 
 .about-wrapper {
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
-  
 }
-  
 
 .about-header {
   text-align: center;
-  margin-bottom: 70px;
-  padding: 20px;
-  
+  margin-bottom: 42px;
 }
+
 .about-title {
-  font-size: 2rem;
-  font-weight: 900;
-  color: #141614;
-  margin-bottom: 14px;
-  letter-spacing: -0.02em;
+  margin: 0 0 14px;
+  color: #0f172a;
+  font-size: clamp(2rem, 3.4vw, 3rem);
 }
 
 .about-subtitle {
-  font-size: 1.1rem;
-  color: #2c333b;
-  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #475569;
+  font-size: 1.05rem;
+  line-height: 1.75;
 }
+
 .threeBlock-container {
-  display: flex;
-  gap: 30px;
-  justify-content: space-between;
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  align-items: center;
 }
-/* 3 cards in one line */
 
-
-/* each card uses equal width */
 .threeBlock-card {
-  flex: 1;
-  background: #92cdf5;
-  border-radius: 18px;
-  padding: 28px 22px;
-  text-align: center;
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
+  padding: 28px 24px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(240, 253, 250, 0.92));
+  border: 1px solid rgba(156, 193, 245, 0.16);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
 }
+
 .threeBlock-icon {
-  width: 50px;
-  height: 50px;
+  width: 54px;
+  height: 54px;
   margin-bottom: 18px;
+  align-items: center;
+  justify-content: center;
 }
 
 .threeBlock-title {
-  font-size: 1.25rem;
-  font-weight: 800;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
   color: #0f172a;
-  align-items: center;
+  font-size: 1.2rem;
 }
 
 .threeBlock-desc {
-  font-size: 1rem;
-  color: #2c333b;
-  line-height: 1.6;
-  align-items: center;
+  margin: 0;
+  color: #475569;
+  line-height: 1.7;
 }
 
-/* responsive: stack on small screens */
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
+  .about-section {
+    padding-inline: 24px;
+  }
+
   .threeBlock-container {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 }

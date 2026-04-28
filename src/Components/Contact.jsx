@@ -2,7 +2,7 @@ import '../Components-css/Contact.css';
 
 function Contact() {
   return (
-    <footer id="contact" className="contact-section">
+    <footer className="contact-section">
       <div className="contact-wrapper">
         <div className="contact-brand">
           <div className="brand-badge">E</div>
@@ -40,7 +40,7 @@ function Contact() {
       </div>
 
       <div className="contact-divider"></div>
-      <p className="contact-copy">© 2026 EstateMind. All rights reserved.</p>
+      <p className="contact-copy">Â© 2026 EstateMind. All rights reserved.</p>
     </footer>
   );
 }

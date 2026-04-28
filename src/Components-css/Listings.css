@@ -1,0 +1,146 @@
+.listing-section {
+  padding: 80px 60px;
+}
+
+.listing-wrapper {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.listing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 36px;
+}
+
+.listing-card {
+  padding: 24px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  box-shadow: 0 20px 44px rgba(15, 23, 42, 0.08);
+}
+
+.listing-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.listing-location {
+  margin: 0 0 8px;
+  color: #0f766e;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.listing-card h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 1.25rem;
+}
+
+.listing-price {
+  white-space: nowrap;
+  color: #14532d;
+  font-weight: 800;
+}
+
+.listing-description {
+  margin: 18px 0;
+  color: #475569;
+  line-height: 1.75;
+}
+
+.listing-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.listing-meta span {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.08);
+  color: #134e4a;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.vote-panel {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+.vote-summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+  color: #475569;
+  font-size: 0.92rem;
+}
+
+.vote-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.vote-actions button {
+  padding: 12px 10px;
+  border-radius: 14px;
+  background: #eff6ff;
+  color: #1e3a8a;
+  font-weight: 700;
+}
+
+.vote-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.vote-hint,
+.all-loaded-text {
+  margin: 12px 0 0;
+  color: #64748b;
+}
+
+.listing-footer {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.view-more-btn {
+  padding: 14px 26px;
+  border-radius: 999px;
+  background: #0f172a;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+@media (max-width: 1100px) {
+  .listing-section {
+    padding-inline: 24px;
+  }
+
+  .listing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .listing-grid,
+  .vote-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .listing-card-header,
+  .vote-summary {
+    flex-direction: column;
+  }
+}

@@ -1,24 +1,40 @@
+import { Link, NavLink } from 'react-router-dom';
 import '../Components-css/Navbar.css';
 
-function Navbar() {
+function Navbar({ role, currentUser, onOpenAuth, onLogout }) {
   return (
     <header className="navbar">
       <div className="navbar-inner">
-        <div className="navbar-brand">
-          <div className="navbar-logo" aria-hidden="true">E</div>
+        <Link to="/" className="navbar-brand">
+          <div className="navbar-logo" aria-hidden="true">
+            E
+          </div>
           <span className="brand-text">
             Estate<span>Mind</span>
           </span>
-        </div>
+        </Link>
 
         <nav className="navbar-links">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#predict">Predict</a>
-          <a href="#contact">Contact</a>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/properties">Properties</NavLink>
+          <NavLink to="/predict">Predict</NavLink>
+          <NavLink to="/seller">Seller</NavLink>
+          <NavLink to="/admin">Admin</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
         </nav>
 
-        <a className="navbar-cta" href="#predict">Get Started</a>
+        <div className="navbar-actions">
+          {currentUser ? <span className="navbar-role">Signed in as {currentUser.name} ({role})</span> : null}
+          {currentUser ? (
+            <button type="button" className="navbar-logout" onClick={onLogout}>
+              Logout
+            </button>
+          ) : (
+            <button type="button" className="navbar-login" onClick={onOpenAuth}>
+              Login / Register
+            </button>
+          )}
+        </div>
       </div>
     </header>
   );

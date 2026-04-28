@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pandas
+numpy
+scikit-learn==1.7.1
+joblib
+lightgbm
+
+## API internal DataFrame columns must be:
+## District, city, numberOfRooms, numberOfBathrooms, HouseSize, LandSize
